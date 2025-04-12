@@ -1,0 +1,64 @@
+openapi: 3.1.0
+info:
+  version: v2.0
+  title: UEX Corp API
+  summary: >-
+    Explore the potential of UEX API 2.0 for your next venture,
+    driven by insights from the Star Citizen community.
+  description: >-
+    Created by [@thekronny](https://discord.com/users/224580858432978944).
+    <img src="https://uexcorp.space/img/api/uex-api-badge-powered.png" alt="Powered by UEX" width="200"/>
+
+    ## Downloads
+    
+    [Specification file](https://app.swaggerhub.com/apiproxy/registry/dolejska-daniel/UEX-API/v2.0?resolved=true&flatten=true&pretty=true)
+  
+    ## Other Resources
+  contact:
+    name: Official Discord
+    url: https://discord.gg/Kf2GZCBgpx
+  license:
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://uexcorp.space/about/legal
+
+servers:
+  - url: https://api.uexcorp.space/2.0
+    description: Official v2
+
+externalDocs:
+  description: Official UEX Corp API 2.0 Documentation
+  url: https://uexcorp.space/api/documentation
+
+tags:
+  - name: Static
+  - name: Game
+  - name: Organizations
+  - name: Crew
+  - name: Commodities
+  - name: User
+  - name: Marketplace
+  - name: Items
+  - name: Refineries
+  - name: Vehicles
+
+components:
+  securitySchemes:
+    application:
+      type: http
+      scheme: bearer
+      name: Authorization
+      description: >-
+        This API uses Bearer token authentication.
+        Provide your application's API key as the bearer token.
+        These can be acquired from [UEX Corp applications](https://ptu.uexcorp.space/api/apps).
+    user:
+      type: apiKey
+      in: header
+      name: secret_key
+      description: >-
+        Certain endpoints require a user secret key.
+        Provide the secret key as the value of the secret_key header.
+        These can be acquired from your [UEX Corp account page](https://ptu.uexcorp.space/account)
+
+paths: {}
