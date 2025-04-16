@@ -8,11 +8,11 @@ info:
   description: >-
     Created by [@thekronny](https://discord.com/users/224580858432978944).
     <img src="https://uexcorp.space/img/api/uex-api-badge-powered.png" alt="Powered by UEX" width="200"/>
-
+    
     ## Downloads
     
     [Specification file](https://app.swaggerhub.com/apiproxy/registry/dolejska-daniel/UEX-API/v2.0?resolved=true&flatten=true&pretty=true)
-  
+    
     ## Other Resources
   contact:
     name: Official Discord
@@ -47,7 +47,6 @@ components:
     application:
       type: http
       scheme: bearer
-      name: Authorization
       description: >-
         This API uses Bearer token authentication.
         Provide your application's API key as the bearer token.
@@ -61,4 +60,4 @@ components:
         Provide the secret key as the value of the secret_key header.
         These can be acquired from your [UEX Corp account page](https://ptu.uexcorp.space/account)
 
-paths: {}
+paths: { }

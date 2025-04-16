@@ -537,12 +537,12 @@ class APICollector:
         securities = []
         if endpoint.is_user_bound:
             securities.append({
-                "user": {},
+                "user": [],
             })
 
         if endpoint.base_path not in self.without_auth:
             securities.append({
-                "application": {},
+                "application": [],
             })
 
         return securities
@@ -849,7 +849,7 @@ if __name__ == "__main__":
                         )
                     data_mappings[link_template.link] = {
                         endpoint.method.lower(): {
-                            "operationId": stringcase.snakecase(f"{endpoint.method.lower()}_{endpoint.id}{operation_id_suffix}"),
+                            "operationId": stringcase.pascalcase(f"{endpoint.method.lower()}_{endpoint.id}{operation_id_suffix}"),
                             "summary": endpoint.description,
                             "tags": collector.get_tags(endpoint),
                             "security": collector.get_security(endpoint),
